@@ -14,38 +14,37 @@ export default function DestinationSection() {
   }
 
   return (
-    <div className="flex flex-col w-full items-center px-8 py-16 gap-y-8 bg-blue-50">
+    <div id="destination" className="flex flex-col w-full items-center px-6 md:px-8 py-8 md:py-16 gap-y-4 md:gap-y-8 bg-blue-50 scroll-mt-16">
       <p className="text-sm">Discover the places travelers love the most!</p>
-      <h1 className="text-5xl md:text-6xl font-semibold text-center">Most Popular<br /><span className="text-blue-500">destinations</span></h1>
-      <p className="text-center max-w-1/3">From breathtaking landscapes to vibrant cultures, these destinations are handpicked to give you unforgettable memories.</p>
+      <h1 className="text-3xl md:text-6xl font-semibold text-center">Most Popular<br /><span className="text-blue-500">destinations</span></h1>
+      <p className="text-sm md:text-base text-center md:max-w-1/3">From breathtaking landscapes to vibrant cultures, these destinations are handpicked to give you unforgettable memories.</p>
 
-      <div className="flex w-full justify-center items-center gap-x-8">
-        <button onClick={() => changePage('prev')} className="bg-white p-2 rounded-full cursor-pointer hover:bg-slate-500 flex justify-center items-center hover:text-white duration-300">
-          <FaChevronLeft className="size-6" />
-        </button>
-        <div className="max-w-3/4">
+      <div className="flex flex-col md:flex-row w-full md:justify-center items-center gap-x-8 gap-y-4">
+        <FaChevronLeft onClick={() => changePage('prev')} className="hidden md:block size-8 p-2 bg-white text-slate-700 cursor-pointer hover:bg-slate-300 duration-300 rounded-full shadow-md" />
+        <div className="w-full md:max-w-3/4">
           <Carousel
             ref={carouselRef}
             infinite
             autoplay
+            dots={false}
           >
             {destinations.map((destination, idx) => (
               <div key={idx}>
-                <div className="flex w-full">
-                  <img src={destination.imgSrc} alt="destination" className="w-1/2 h-auto object-cover flex-1" />
-                  <div className="flex flex-col justify-center p-8 gap-y-8 w-1/2 h-auto flex-1 bg-white">
-                    <p className="text-6xl">{destination.name},<span className="italic">{destination.subName}</span></p>
-                    <p className="text-sm text-slate-500">{destination.desc}</p>
-                    <div className="flex flex-wrap gap-6">
+                <div className="flex flex-col md:flex-row w-full">
+                  <img src={destination.imgSrc} alt="destination" className="w-full md:w-1/2 h-auto object-cover flex-1" />
+                  <div className="flex flex-col justify-center p-6 md:p-8 gap-y-6 md:gap-y-8 w-full md:w-1/2 h-auto flex-1 bg-white">
+                    <p className="text-4xl md:text-6xl">{destination.name},<span style={{ fontStyle: 'italic' }}> {destination.subName}</span></p>
+                    <p className="text-xs md:text-sm text-slate-500">{destination.desc}</p>
+                    <div className="flex flex-wrap gap-4 md:gap-6">
                       {destination.places.map((place, placeId) => (
-                        <div key={placeId} className="flex gap-x-4 items-center">
+                        <div key={placeId} className="flex gap-x-2 md:gap-x-4 items-center">
                           <FaCheck className="size-4 text-blue-500" />
-                          <p className="font-semibold">{place}</p>
+                          <p className="text-xs md:text-base font-semibold">{place}</p>
                         </div>
                       ))}
                     </div>
                     <div className="flex flex-col md:flex-row md:justify-center gap-6 items-center">
-                      <button className="bg-blue-500 text-white py-2 px-6 rounded-full cursor-pointer hover:bg-blue-400 duration-300 text-sm">Book your Tour</button>
+                      <button className="bg-blue-500 text-white py-2 px-6 rounded-full cursor-pointer hover:bg-blue-400 duration-300 text-sm w-full md:w-fit">Book your Tour</button>
                       <div className="flex gap-x-2 items-center">
                         <div className="flex justify-center items-center text-black rounded-full border border-black p-2">
                           <LuPhone className="size-4 md:size-6" />
@@ -62,9 +61,11 @@ export default function DestinationSection() {
             ))}
           </Carousel>
         </div>
-        <button onClick={() => changePage('next')} className="bg-white p-2 rounded-full cursor-pointer hover:bg-slate-500 flex justify-center items-center hover:text-white duration-300">
-          <FaChevronRight className="size-6" />
-        </button>
+        <FaChevronRight onClick={() => changePage('next')} className="hidden md:block size-8 p-2 bg-white text-slate-700 cursor-pointer hover:bg-slate-300 duration-300 rounded-full shadow-md" />
+        <div className="flex gap-x-6 items-center md:hidden">
+          <FaChevronLeft onClick={() => changePage('prev')} className="size-8 p-2 bg-white text-slate-700 cursor-pointer hover:bg-slate-300 duration-300 rounded-full shadow-md" />
+          <FaChevronRight onClick={() => changePage('next')} className="size-8 p-2 bg-white text-slate-700 cursor-pointer hover:bg-slate-300 duration-300 rounded-full shadow-md" />
+        </div>
       </div>
     </div>
   )

@@ -3,7 +3,7 @@ import { LuPhone } from "react-icons/lu";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center md:justify-end h-screen bg-black/60 py-12 md:py-32 gap-y-8 md:gap-y-12 text-white">
+    <div id="home" className="flex flex-col items-center justify-center md:justify-end h-screen bg-black/60 py-12 md:py-32 gap-y-8 md:gap-y-12 text-white scroll-pt-20">
       <div className="flex gap-x-3 items-center">
         {Array.from({ length: 5 }).map((_, idx) => (
           <IoStar key={idx} className="size-4 md:size-5" />

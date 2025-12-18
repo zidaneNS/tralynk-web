@@ -70,7 +70,7 @@ export default function OverviewSection() {
         </div>
       </div>
 
-      <div className="flex md:justify-center items-center w-full gap-8 md:gap-x-16 flex-wrap md:flex-nowrap">
+      <div className="flex justify-center items-center w-full gap-8 md:gap-x-16 flex-wrap md:flex-nowrap">
         {informations.map((information, idx) => (
           <div key={idx} className="flex flex-col md:flex-row gap-4 md:items-center">
             <p className="text-5xl md:text-6xl text-blue-500">{information.total}k+</p>
