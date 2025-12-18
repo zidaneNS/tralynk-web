@@ -1,7 +1,7 @@
 import { Carousel } from "antd";
 import type { CarouselRef } from "antd/es/carousel";
 import { useRef } from "react";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { LuPhone } from "react-icons/lu";
 import { destinations } from "../mockup/destination";
 
@@ -20,8 +20,10 @@ export default function DestinationSection() {
       <p className="text-center max-w-1/3">From breathtaking landscapes to vibrant cultures, these destinations are handpicked to give you unforgettable memories.</p>
 
       <div className="flex w-full justify-center items-center gap-x-8">
-        <button onClick={() => changePage('prev')} className="bg-white py-2 px-4 rounded-md cursor-pointer hover:bg-slate-700 hover:text-white duration-300">Prev</button>
-        <div className="max-w-3/4 shadow-md">
+        <button onClick={() => changePage('prev')} className="bg-white p-2 rounded-full cursor-pointer hover:bg-slate-500 flex justify-center items-center hover:text-white duration-300">
+          <FaChevronLeft className="size-6" />
+        </button>
+        <div className="max-w-3/4">
           <Carousel
             ref={carouselRef}
             infinite
@@ -60,7 +62,9 @@ export default function DestinationSection() {
             ))}
           </Carousel>
         </div>
-        <button onClick={() => changePage('next')} className="bg-white py-2 px-4 rounded-md cursor-pointer hover:bg-slate-700 duration-300">Next</button>
+        <button onClick={() => changePage('next')} className="bg-white p-2 rounded-full cursor-pointer hover:bg-slate-500 flex justify-center items-center hover:text-white duration-300">
+          <FaChevronRight className="size-6" />
+        </button>
       </div>
     </div>
   )
