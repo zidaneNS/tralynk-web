@@ -47,7 +47,7 @@ export default function OverviewSection() {
               <p className="text-sm md:text-base">5 Rate by 1,000+ Reviews</p>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold">Discover the <span className="text-blue-500">World with us.</span></h2>
+            <h2 className="text-4xl md:text-7xl">Discover the <span className="text-blue-500">World with us.</span></h2>
             <p className="text-sm md:text-base">From breathtaking landscapes to cultural wonders, we craft journeys that bring your dream destinations to life. Whether you’re planning a relaxing getaway or an adventure-filled expedition, our team ensures every detail is taken care of.</p>
           </div>
 
