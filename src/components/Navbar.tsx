@@ -31,8 +31,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const maxScroll = 200;
-      setScrollVal(Math.min(window.scrollY / maxScroll, 1));
+      const maxScroll = 100;
+      setScrollVal(Math.min(window.scrollY / maxScroll, 0.95));
     }
 
     window.addEventListener('scroll', handleScroll);
@@ -41,7 +41,7 @@ export default function Navbar() {
   }, []);
   return (
     <div 
-      className="flex justify-between px-4 md:px-16 py-2 md:py-4 items-center fixed top-0 w-screen bg-black/80 bg-opa duration-300"
+      className="flex justify-between px-4 md:px-16 py-4 items-center fixed top-0 w-screen duration-300"
       style={{
         backgroundColor: `rgba(0,0,0,${scrollVal})`
       }}  
