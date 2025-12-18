@@ -1,8 +1,10 @@
 import hero from "./assets/images/img-hero-bg.jpg";
 import Navbar from "./components/Navbar";
+import BenefitSection from "./sections/BenefitSection";
 import DestinationSection from "./sections/DestinationSection";
 import Home from "./sections/Home";
 import OverviewSection from "./sections/OverviewSection";
+import PackageSection from "./sections/PackageSection";
 
 export default function App() {
   return (
@@ -12,6 +14,8 @@ export default function App() {
       <Home />
       <OverviewSection />
       <DestinationSection />
+      <BenefitSection />
+      <PackageSection />
     </div>
   )
 }
