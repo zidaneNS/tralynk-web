@@ -3,8 +3,10 @@ import Navbar from "./components/Navbar";
 import BenefitSection from "./sections/BenefitSection";
 import DestinationSection from "./sections/DestinationSection";
 import Home from "./sections/Home";
+import MoreDestination from "./sections/MoreDestination";
 import OverviewSection from "./sections/OverviewSection";
 import PackageSection from "./sections/PackageSection";
+import ReviewSection from "./sections/ReviewSection";
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
       <DestinationSection />
       <BenefitSection />
       <PackageSection />
+      <ReviewSection />
+      <MoreDestination />
     </div>
   )
 }
