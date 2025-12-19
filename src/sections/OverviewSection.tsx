@@ -38,7 +38,7 @@ export default function OverviewSection() {
   return (
     <div className="flex flex-col gap-y-8 md:gap-y-20 px-6 md:px-16 py-8 md:py-8 w-full">
       <div className="flex flex-col md:flex-row w-full gap-y-8 md:gap-x-12 md:gap-y-0">
-        <div className="flex flex-col justify-between flex-1 md:py-12 gap-y-4 md:gap-y-0">
+        <div className="flex flex-col justify-between flex-1 md:py-12 gap-y-4">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <div className="flex gap-x-2 md:gap-x-4 items-center">
               {Array.from({ length: 5 }).map((_, idx) => (

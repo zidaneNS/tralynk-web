@@ -13,7 +13,7 @@ export default function Home() {
       <h1 className="text-4xl md:text-7xl font-bold md:max-w-3/4 text-center">Discover the world, one journey at a time.</h1>
       <p className="text-center">Handpicked travel packages designed to make every trip unforgettable.</p>
       <div className="flex flex-col md:flex-row md:justify-center gap-6 items-center">
-        <button className="bg-white text-black py-2 px-6 rounded-full cursor-pointer hover:bg-blue-500 hover:text-white duration-300 text-sm">Book your Tour</button>
+        <button onClick={() => window.location.replace('#contact')} className="bg-white text-black py-2 px-6 rounded-full cursor-pointer hover:bg-blue-500 hover:text-white duration-300 text-sm">Book your Tour</button>
         <div className="flex gap-x-2 items-center">
           <div className="flex justify-center items-center bg-black/40 rounded-full border border-white p-2">
             <LuPhone className="size-4 md:size-6" />

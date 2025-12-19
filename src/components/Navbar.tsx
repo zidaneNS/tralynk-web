@@ -51,12 +51,17 @@ export default function Navbar() {
         {navLinks.map((navLink, idx) => (
           <a href={navLink.href} key={idx} className="hover:text-blue-500 duration-300">{navLink.label}</a>
         ))}
+        <button onClick={() => window.location.replace('#contact')} className="text-white bg-blue-500 py-1 px-4 rounded-full cursor-pointer hover:bg-blue-400 duration-300 w-fit">Order Now</button>
       </div>
       <GiHamburgerMenu onClick={() => setIsOpen(prev => !prev)} className="text-white size-6 md:hidden z-10" />
       <div className={`fixed ${isOpen ? 'top-0' : '-top-full'} w-screen flex flex-col gap-y-6 items-center px-4 pt-12 py-6 bg-black/80 rounded-b-xl text-white left-0 backdrop-blur-md duration-300`}>
         {navLinks.map((navLink, idx) => (
           <a onClick={() => setIsOpen(false)} href={navLink.href} key={idx} className="hover:text-blue-500 duration-300 text-sm py-2 border-b border-white w-full text-center">{navLink.label}</a>
         ))}
+        <button onClick={() => {
+          window.location.replace('#contact');
+          setIsOpen(false);
+        }} className="text-white bg-blue-500 py-1 px-4 rounded-full cursor-pointer hover:bg-blue-400 duration-300 w-fit">Order Now</button>
       </div>
     </div>
   )

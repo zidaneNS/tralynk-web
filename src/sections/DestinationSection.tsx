@@ -44,7 +44,7 @@ export default function DestinationSection() {
                       ))}
                     </div>
                     <div className="flex flex-col md:flex-row md:justify-center gap-6 items-center">
-                      <button className="bg-blue-500 text-white py-2 px-6 rounded-full cursor-pointer hover:bg-blue-400 duration-300 text-sm w-full md:w-fit">Book your Tour</button>
+                      <button onClick={() => window.location.replace('#contact')} className="bg-blue-500 text-white py-2 px-6 rounded-full cursor-pointer hover:bg-blue-400 duration-300 text-sm w-full md:w-fit">Book your Tour</button>
                       <div className="flex gap-x-2 items-center">
                         <div className="flex justify-center items-center text-black rounded-full border border-black p-2">
                           <LuPhone className="size-4 md:size-6" />

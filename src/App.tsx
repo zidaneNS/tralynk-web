@@ -1,7 +1,9 @@
 import hero from "./assets/images/img-hero-bg.jpg";
 import Navbar from "./components/Navbar";
 import BenefitSection from "./sections/BenefitSection";
+import ContactSection from "./sections/ContactSection";
 import DestinationSection from "./sections/DestinationSection";
+import FooterSection from "./sections/FooterSection";
 import Home from "./sections/Home";
 import MoreDestination from "./sections/MoreDestination";
 import OverviewSection from "./sections/OverviewSection";
@@ -20,6 +22,8 @@ export default function App() {
       <PackageSection />
       <ReviewSection />
       <MoreDestination />
+      <ContactSection />
+      <FooterSection />
     </div>
   )
 }
